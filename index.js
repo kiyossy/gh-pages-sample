@@ -60,6 +60,9 @@ const fragmentShaders = [  // Define some simple shaders to apply to the camera 
       vec3 keyColor = vec3(.99, .498, .313);
       float d = distance(keyColor,c.rgb);
       vec3 rgb = c.rgb * vec3(.463, .067, .712);
+      if (d < 0) {
+        
+      }
       gl_FragColor = vec4(rgb, c.a);
     }`,
 ]
