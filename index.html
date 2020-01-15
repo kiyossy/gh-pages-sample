@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>image targets</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
     <script src="//cdn.8thwall.com/web/xrextras/xrextras.js"></script>
     <script async src="//apps.8thwall.com/xrweb?appKey=lgviLrxed6uunZPh2SWL5zKHACJZkBTjCNwhx5l6pDMGU8VjmcCWnIxaTzp1OzZrQV926i"></script>
@@ -59,26 +60,7 @@
   </script>
 
 
-    <a-scene
-      xrweb="disableWorldTracking: true"
-      xrextras-almost-there
-      xrextras-runtime-error
-      xrextras-loading >
-      <a-assets>
-        <!-- 必要であればここで3Dモデルやimgを読み込む -->
-      </a-assets>
-      <a-camera position="0 8 8"></a-camera>
-      <a-entity
-        light="type: directional; castShadow: false; intensity: 0.5;"
-        position="-0.8 3 1.85" >
-      </a-entity>
-
-      <a-entity xrextras-named-image-target="name: test_3_scaled">
-        <!-- ここへマーカー認識した時に表示させたいオブジェクトを子要素として配置 -->
-        <a-box material="color: #00EDAF;" shadow >
-        </a-box>
-      </a-entity>
-    </a-scene>
+  
     <canvas id="c" width="465" height="465"></canvas>
     <script src="index.js"></script>
   </body>
