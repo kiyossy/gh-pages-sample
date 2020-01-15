@@ -97,7 +97,7 @@ function initBuffers() {
         gl.generateMipmap(gl.TEXTURE_2D);
         animate();
     };
-    img.src = "frog.jpg";
+    img.src = "frog.jpeg";
 }
 
 function animate() {
