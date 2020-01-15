@@ -52,6 +52,15 @@ const fragmentShaders = [  // Define some simple shaders to apply to the camera 
       vec3 rgb = y < .25 ? (y * 4.0) * p : ((y - .25) * 1.333) * (vec3(1.0, 1.0, 1.0) - p) + p;
       gl_FragColor = vec4(rgb, c.a);
     }`,
+  ` precision mediump float;  // Chromakey.
+    varying vec2 texUv;
+    uniform sampler2D sampler;
+    void main() {
+      vec4 c = texture2D(sampler, texUv);
+      vec3 keyColor = vec3(1, .498, .313);
+      if(distance(keyColor,c.rgb)-1 < 0) discard;  
+      gl_FragColor = vec4(c.rgb, c.a);
+    }`,
 ]
 
 // Define a custom pipeline module. This module cycles through a set of pre-defined shaders each
