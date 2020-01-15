@@ -52,14 +52,15 @@ const fragmentShaders = [  // Define some simple shaders to apply to the camera 
       vec3 rgb = y < .25 ? (y * 4.0) * p : ((y - .25) * 1.333) * (vec3(1.0, 1.0, 1.0) - p) + p;
       gl_FragColor = vec4(rgb, c.a);
     }`,
-  ` precision mediump float;  // Chromakey.
+  ` precision mediump float;  // Sepia.
     varying vec2 texUv;
     uniform sampler2D sampler;
     void main() {
       vec4 c = texture2D(sampler, texUv);
-      vec3 keyColor = vec3(1, .498, .313);
-      
-      gl_FragColor = vec4(c.rgb, c.a);
+      gl_FragColor.r = dot(c.rgb, vec3(.393, .769, .189));
+      gl_FragColor.g = dot(c.rgb, vec3(.349, .686, .168));
+      gl_FragColor.b = dot(c.rgb, vec3(.272, .534, .131));
+      gl_FragColor.a = c.a;
     }`,
 ]
 
