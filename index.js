@@ -58,7 +58,7 @@ const fragmentShaders = [  // Define some simple shaders to apply to the camera 
     void main() {
       vec4 c = texture2D(sampler, texUv);
       vec3 keyColor = vec3(1, .498, .313);
-      if(distance(keyColor,c.rgb)-1 < 0) discard;  
+      
       gl_FragColor = vec4(c.rgb, c.a);
     }`,
 ]
