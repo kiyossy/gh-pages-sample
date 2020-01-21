@@ -9,12 +9,12 @@
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false">
     <!-- オブジェクトファイルとマテリアルファイルを読み込む -->
     <a-assets>
-        <a-asset-item id="Earth1227-obj" src="assets/src/Earth1227.obj"></a-asset-item>
-        <a-asset-item id="Earth1227-mtl" src="assets/src/Earth1227.mtl"></a-asset-item>
+        <a-asset-item id="Rocket_Ship_01-obj" src="assets/src/Rocket_Ship_01.obj"></a-asset-item>
+        <a-asset-item id="Rocket_Ship_01-mtl" src="assets/src/Rocket_Ship_01.mtl"></a-asset-item>
     </a-assets>
 　　　　　　　　<!-- こっからARの世界。マーカー上になにを展開するかを書く -->
     <a-marker preset="hiro">
-        <a-obj-model id="Earth1227" src="#Earth1227-obj" mtl="#Earth1227-mtl" position="0 0 0" scale="0.005 0.005 0.005" rotation="0 0 90"></a-obj-model>
+        <a-obj-model id="Rocket_Ship_01" src="#Rocket_Ship_01-obj" mtl="#Rocket_Ship_01-mtl" position="0 0 0" scale="0.05 0.05 0.05" rotation="0 0 90"></a-obj-model>
         <a-text value="Hello YouTube！!！" position="0 1.3 0" align="center"></a-text>
     </a-marker>
     <!-- arなのでこんな感じでカメラが必要らしい。 -->
