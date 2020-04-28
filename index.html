@@ -33,6 +33,10 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
+    <a-assets>
+        <a-asset-item id="kiyo_voxcel-obj" src="assets/src/kiyo_voxcel.obj"></a-asset-item>
+        <a-asset-item id="kiyo_voxcel-mtl" src="assets/src/kiyo_voxcel.mtl"></a-asset-item>
+    </a-assets>
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
       type="nft"
@@ -48,6 +52,8 @@
         position="50 150 0"
       >
       </a-entity>
+
+       <a-obj-model id="kiyo_voxcel" src="#kiyo_voxcel-obj" mtl="#kiyo_voxcel-mtl" position="0.11 0 0.5" scale="0.04 0.04 0.04" rotation="-90 0 0"></a-obj-model>
     </a-nft>
     <a-entity camera></a-entity>
   </a-scene>
